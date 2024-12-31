@@ -33,6 +33,11 @@ const SignUp: React.FC = () => {
         } else {
             if (otp.join('') === dummyOtp.join('')) {
                 toast.success('OTP Verified Successfully!');
+                setTimeout(() => {
+                    setOtpScreen(false);
+                    setPhoneNumber('');
+                    setOtp(['', '', '', '']);
+                }, 1500);
             } else {
                 toast.error('Invalid OTP, please try again!');
             }
@@ -74,7 +79,7 @@ const SignUp: React.FC = () => {
             )}
             <div className='tab:py-10 lap:py-0'>
                 <div className="tab:shadow-2xl tab:bg-white lap:bg-white tab:mx-10 lap:mx-56  sm:rounded-lg lap:flex justify-center lap:flex-1">
-                    <div className="bg-gradient-to-tr from-[#008E9A] to-[#00474D] tab:rounded-t-lg lap:rounded-l-lg text-center lap:flex lap:w-2/5 p-6 lap:p-0">
+                    <div className="gradient-box bg-gradient-to-tr from-[#008E9A] to-[#00474D] tab:rounded-t-lg lap:rounded-l-lg text-center lap:flex lap:w-2/5 p-6 lap:p-0">
 
                         <div className='hidden mobile:block'>
                             <div className='flex gap-2 my-3'>
