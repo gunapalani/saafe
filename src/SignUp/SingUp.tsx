@@ -6,7 +6,7 @@ import { HashLoader } from 'react-spinners';
 const SignUp: React.FC = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [loading, setLoading] = useState(false);
-    const [otpScreen, setOtpScreen] = useState(true);
+    const [otpScreen, setOtpScreen] = useState(false);
     const [otp, setOtp] = useState<string[]>(['', '', '', '']);
     const [resendTimer, setResendTimer] = useState(30);
     const [dummyOtp] = useState(['1', '2', '3', '4']);
