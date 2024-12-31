@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { HashLoader } from 'react-spinners';
+import StepByStep from './StepByStep';
 
 const SignUp: React.FC = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -102,37 +103,7 @@ const SignUp: React.FC = () => {
                         <div className='lap:my-10'>
                             <div className='text-white text-2xl font-semibold px-1 lap:p-6 text-left'>Share your financial information to ICICI Bank</div>
                             <div className="py-2 lap:p-5 text-white">
-                                <div className="flex flex-col relative">
-                                    <div className="relative mb-16">
-                                        <div className="w-10 h-10 bg-white text-white rounded-full flex items-center justify-center text-lg z-10 relative">
-                                            <img className='' src="/login.svg" alt="Step 1" />
-                                        </div>
-                                        <div className=" text-left ml-14 -mt-8">
-                                            <p className='font-semibold text-base'>Log in/Sign up</p>
-                                            <p className='text-xs mt-1'>Enter the OTP sent to your mobile.</p>
-                                        </div>
-                                        <div className="absolute left-5 top-5 h-24 w-px border border-dashed border-white z-0"></div>
-                                    </div>
-                                    <div className="relative mb-16">
-                                        <div className="w-10 h-10 bg-white text-white rounded-full flex items-center justify-center text-lg z-10 relative">
-                                            <img src="/login.svg" alt="Step 2" />
-                                        </div>
-                                        <div className=" text-left ml-14 -mt-8">
-                                            <p className='font-semibold text-base'>Select accounts to share</p>
-                                            <p className='text-xs mt-1'>Choose the accounts you'd like to share.</p>
-                                        </div>
-                                        <div className="absolute left-5 top-5 h-24 w-px border border-dashed border-white z-0"></div>
-                                    </div>
-                                    <div className="relative mb-16">
-                                        <div className="w-10 h-10 bg-white text-white rounded-full flex items-center justify-center text-lg z-10 relative">
-                                            <img src="/login.svg" alt="Step 3" />
-                                        </div>
-                                        <div className=" text-left ml-14 -mt-8">
-                                            <p className='font-semibold text-base'>Review Consent</p>
-                                            <p className='text-xs mt-1'>Approve or reject after reviewing the details.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <StepByStep />
                             </div>
                         </div>
                     </div>
